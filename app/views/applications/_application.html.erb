@@ -1,0 +1,13 @@
+<li id="application-<%= application.id %>">
+  <%= link_to gravatar_for(application.user, size: 50), application.user %>
+  <span class="user"><%= link_to application.user.name, application.user %></span>
+  <span class="description"><%= application.description %></span>
+  <span class="apikey"><%= application.APIkey %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(application.created_at) %> ago.
+    <% if current_user?(application.user) %>
+      <%= link_to "delete", application, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
