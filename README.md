@@ -1,5 +1,5 @@
 
-[https://enigmatic-peak-67272.herokuapp.com/](https://enigmatic-peak-67272.herokuapp.com/)**
+[https://enigmatic-peak-67272.herokuapp.com/](https://enigmatic-peak-67272.herokuapp.com/)
 
 * Logga in som användare med testing[1-50]@testing.com
 * Lösenord: testing
