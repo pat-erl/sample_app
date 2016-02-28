@@ -1,8 +1,23 @@
 <%= form_for(@application) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :description, placeholder: "Describe your application here.." %>
-    <%= f.text_area :APIkey, placeholder: "You will recieve an API-key when the application is registered." %>
+    Name of your application: <%= f.text_area :description, placeholder: "Write name of application here.." %>
+    Your auto-generated API-key: <%= f.text_area :APIkey, id: "hejsan", readonly: "readonly" %>
   </div>
-  <%= f.submit "Register new application", class: "btn btn-primary" %>
+  <%= f.submit "Register application", class: "btn btn-primary" %>
 <% end %>
+
+<script type="text/javascript">
+  
+  function Random() {
+    
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 12; i++ ) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+  }
+  document.getElementById('hejsan').value = Random()
+</script>
