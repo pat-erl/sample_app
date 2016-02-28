@@ -15,7 +15,7 @@ User.create!(name:  "Patrik Erlandsson",
 end
 
 users = User.order(:created_at).take(6)
-50.times do
+3.times do
   content = Faker::Lorem.sentence(1)
-  users.each { |user| user.applications.create!(description: content, APIkey: "12345678987654321") }
+  users.each { |user| user.applications.create!(description: content, APIkey: "hdgt3jh6nj34") }
 end
