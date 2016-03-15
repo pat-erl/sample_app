@@ -11,9 +11,9 @@
   <div class="col-md-8">
     <% if @user.applications.any? %>
       <h3>Applications (<%= @user.applications.count %>)</h3>
-      <ol class="applications">
-        <%= render @applications %>
-      </ol>
+        <ol class="applications">
+          <%= render @applications %>
+        </ol>
       <%= will_paginate @applications %>
     <% end %>
   </div>

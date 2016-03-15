@@ -1,7 +1,6 @@
 <li id="application-<%= application.id %>">
   <%= link_to gravatar_for(application.user, size: 50), application.user %>
-  <span class="user"><%= link_to application.user.name, application.user %></span>
-  <span class="description">Name: <%= application.description %></span>
+  <span class="description">Application-name: <%= application.description %></span>
   <span class="apikey">API-key: <%= application.APIkey %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(application.created_at) %> ago.

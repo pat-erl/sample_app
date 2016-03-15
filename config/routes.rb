@@ -77,3 +77,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+
+namespace :api do  
+  resources :albums, :artists
+end
